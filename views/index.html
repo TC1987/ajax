@@ -3,11 +3,29 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My AJAX Page</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
     </head>
     <body>
 
         <h2>Coffee Orders</h2>
+
         <ul id="orders">
+            <template id="order-template">
+                <li data-id="{{id}}">
+                    <p>Name:</p>
+                    <span class="noEdit" id='name'>{{name}}</span>
+                    <input type="text" class="onEdit name">
+                    <p>Drink:</p>
+                    <span class="noEdit" id='drink'>{{drink}}</span>
+                    <input type="text" class="onEdit drink">
+                    <div class="buttons">
+                        <button class="remove">X</button>
+                        <button class="noEdit editOrder">Edit</button>
+                        <button class="onEdit saveEdit">Save</button>
+                        <button class="onEdit cancelEdit">Cancel</button>
+                    </div>
+                </li>
+            </template>
         </ul>
 
         <h4>Add Coffee Order</h4>
@@ -16,7 +34,7 @@
         <button id="add-order">Add</button>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="/static/index.js"></script>
         <script src="/static/mustache.js"></script>
+        <script src="/static/index.js"></script>
     </body>
 </html>

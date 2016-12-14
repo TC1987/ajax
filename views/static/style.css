@@ -1,0 +1,17 @@
+ul {
+    list-style: none;
+}
+
+ul li {
+    width: 200px;
+    border: 1px solid #CCC;
+    padding: 20px;
+}
+
+ul li .onEdit {
+    display: none;
+}
+
+ul li .noEdit {
+    display: initial;
+}
